@@ -116,24 +116,55 @@ var work = {
 var projects = {
 	"projects": [ 
 	{
+		"title": "Arcade Game",
+		"dates": "2015",
+		"description": "Project developed as part of the Udacity Front-end developer nanodegree",
+		"images": ["images/Joel.png"]
+	},
+	{
+		"title": "Neighborhood Map",
+		"dates": "2015",
+		"description": "Project developed as part of the Udacity Front-end developer nanodegree",
+		"images": ["images/Joel.png"]
+	},
+	{
+		"title": "Working through statistics. 
+				A mobile application to enhance teaching and learning in Higher Education",
+		"dates": "2015-2016",
+		"description": "Research based design of a mobile application to enhance teaching and learning of 
+						statistics' concepts in the career of Actuarial Sciences (Cass Busines School, 
+						City University London.",
+		"images": ["images/Joel.png"]
+	},
+	{
+		"title": "New literacies in teachers' educational. An analysis of curricular policies in Argentina",
+		"dates": "2013-2015",
+		"description": "PhD Research project. It involved the combination of quantitative and qualitative 
+						research to identify and map main theoretical perspectivs about new literacies 
+						in the curricular change in teachers' education, carried on in Argentina from 2007",
+		"images": ["images/Joel.png"]
+	},
+	{
 		"title": "Ansenuza, a digital repository of teaching materials for teachers' education",
 		"dates": "2010-2013",
-		"description": "Key activities: Liaison with external and internal stakeholders: Cordoba government representatives, 
-		IT and library UNC Departments, Teacher Training Institutions.
-		Evaluation and selection of software.
-		Design of licensing, accessibility, and user management policies.
-		Management of a 5-person multidisciplinary team for the deployment of the project.",
+		"description": "Led the development of Ansennuza, an open repository of educational material, 
+				jointly developed by Universidad Nacional de Cordoba and Government of Cordoba. 
+				Key activities: Liaison with external and internal stakeholders: Cordoba government representatives, 
+				IT and library UNC Departments, Teacher Training Institutions.
+				Evaluation and selection of software.
+				Design of licensing, accessibility, and user management policies.
+				Management of a 5-person multidisciplinary team for the deployment of the project.",
 		"images": ["images/Joel.png"]
 	},
 	{
 		"title": "Enhancing University Teaching with New Technology (EUTNT)",
 		"dates": "2000- 2012",
-		"description": "Research-based design of the initial project. Constant monitoring, 
-		evaluation and annual re-elaboration.
-		Periodic report to Spanish coordinator and report writing for AECID. 
-		Liaison with internal and external stakeholders in the development of 4 programmes: 
-		postgraduate teaching, research, equipment provisioning and production of educational materials.
-		Team leadership",
+		"description": "Coordinated the local team at Universidad Nacional de Cordoba. Key activities: 
+				Research-based design of the initial project. Constant monitoring, evaluation and annual 
+				re-elaboration.
+				Periodic report to Spanish coordinator and report writing for AECID. 
+				Liaison with internal and external stakeholders in the development of 4 programmes: 
+				postgraduate teaching, research, equipment provisioning and production of educational materials.",
 		"images": ["images/Joel.png"]
 	}
 	]
