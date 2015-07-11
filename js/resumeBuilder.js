@@ -5,11 +5,13 @@ var bio = {
 		"mobile": "+447824477292",
 		"email": "joelarma@gmail.com",
 		"github": "JoelArmandoP",
+		"twitter": "joelitaap",
 		"location": "London"
 	},
 	pictureUrl: "images/joel.png",
-	welcomeMsg: "welcome",
-	"skills": ["learning design", "curriculum design", "moodle","e-learning","teaching"]
+	welcomeMsg: "Éducational technologist with extensive experience in educational research and project management
+	 diping a toe in the field of programming and web development.",
+	"skills": ["learning design", "curriculum design", "moodle","e-learning","educational research","teaching"]
 
 };
 
@@ -20,36 +22,40 @@ var education = {
 			"name": "Birkbeck College, University of London",
 			"city" : "London, UK",
 			"degree" : "MSc",
-			"Major" :  "Learning Technologies",
-			"year" : "2016"
+			"majors" :  "Learning Technologies",
+			"dates" : "2016",
+			"url": "http://www.dcs.bbk.ac.uk/courses/msclt/"
 		},
 		{
 			"name": "Universidad de Santiago de Compostela",
-			"city" : "Santiago de Compostela, Spain",
+			"location" : "Santiago de Compostela, Spain",
 			"degree" : "PhD",
-			"Major" :"Education",
-			"year" : "2015"
+			"majors" :["Educational Technologies", "Curricular Policies"]
+			"dates" : "2015",
+			"url": "http://www.usc.es/es/centros/cptf/doutoramento/index.html"
 		},
 		{
-			"name": "Universidad Nacional de Córdoba",
-			"city" : "Córdoba, Argentina",
+			"name": "Universidad Nacional de Córdoba. Centro de Estudios Avanzados",
+			"location" : "Córdoba, Argentina",
 			"degree" : "Master",
-			"Major" : "Educational Research",
-			"year" : "2009"
+			"majors" : ["Educational Research", "Mathematics Education"],
+			"dates" : "2009",
+			"url": "http://www.cea.unc.edu.ar/"
 		},
 		{
 			"name": "Universidad Nacional de Córdoba",
-			"city" : "Córdoba, Argentina",
+			"location" : "Córdoba, Argentina",
 			"degree" : "BSc",
-			"Major" : "Educational Sciences",
-			"year" : "2000"
+			"majors" : ["Educational theories", "Sociology", "Antropology", 
+				"History of Education", "Curriculum Design", "Learning Theories"],
+			"dates" : "2000"
 		}
 	],
 	"onlineCourses": [
 		{
 			"title": "Front-end nanodegree",
 			"school": "Udacity",
-			"dates": "2015-2016",
+			"dates": "2015",
 			"url": "http://www.udacity.com"
 		}
 	]
@@ -117,7 +123,7 @@ var projects = {
 		Evaluation and selection of software.
 		Design of licensing, accessibility, and user management policies.
 		Management of a 5-person multidisciplinary team for the deployment of the project.",
-		"images": "images/Joel.png"
+		"images": ["images/Joel.png"]
 	},
 	{
 		"title": "Enhancing University Teaching with New Technology (EUTNT)",
@@ -128,7 +134,7 @@ var projects = {
 		Liaison with internal and external stakeholders in the development of 4 programmes: 
 		postgraduate teaching, research, equipment provisioning and production of educational materials.
 		Team leadership",
-		"images": "images/Joel.png"
+		"images": ["images/Joel.png"]
 	}
 	]
 
