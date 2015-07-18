@@ -8,8 +8,9 @@ var bio = {
 		"twitter": "joelitaap",
 		"location": "London"
 	},
-	"pictureUrl": "images/joel.png",
-	"welcomeMsg": "Éducational technologist with extensive experience in educational research and project management diping a toe in the field of programming and web development.",
+	"pictureUrl": "images/Joel.png",
+	"welcomeMsg": "Educational technologist with extensive experience in educational research " +
+				  "and project management dipping a toe in the field of programming and web development.",
 	"skills": ["learning design", "curriculum design", "moodle","e-learning","educational research","teaching"]
 
 };
@@ -19,7 +20,7 @@ var education = {
 	"schools": [
 	{
 		"name": "Birkbeck College, University of London",
-		"city" : "London, UK",
+		"location" : "London, UK",
 		"degree" : "MSc",
 		"majors" :  "Learning Technologies",
 		"dates" : "2016",
@@ -100,139 +101,127 @@ var work = {
 		"description" : "Program manager for distance learning courses. Provided advice in the design and production of courses and educational materials."
 	}
 	]
-
 };
 
 var projects = {
 	"projects": [ 
-	{
-		"title": "Arcade Game",
-		"dates": "2015",
-		"description": "Project developed as part of the Udacity Front-end developer nanodegree",
-		"images": ["images/Joel.png"]
-	},
-	{
-		"title": "Neighborhood Map",
-		"dates": "2015",
-		"description": "Project developed as part of the Udacity Front-end developer nanodegree",
-		"images": ["images/Joel.png"]
-	},
-	{
-		"title": "Working through statistics. A mobile application to enhance teaching and learning in Higher Education",
-		"dates": "2015-2016",
-		"description": "Research based design of a mobile application to enhance teaching and learning of statistics' concepts in the career of Actuarial Sciences (Cass Busines School, City University London.",
-			"images": ["images/Joel.png"]
+		{
+			"title": "Arcade Game",
+			"dates": "2015",
+			"description": "Project developed as part of the Udacity Front-end developer nanodegree",
+			"images": ["images/ArcadeGame.png"]
+		},
+		{
+			"title": "Neighborhood Map",
+			"dates": "2015",
+			"description": "Project developed as part of the Udacity Front-end developer nanodegree",
+			"images": ["images/NeighborhoodMap.png"]
+		},
+		{
+			"title": "Working through statistics. A mobile application to enhance teaching and learning in Higher Education",
+			"dates": "2015-2016",
+			"description": "Research based design of a mobile application to enhance teaching and learning of statistics' concepts in the career of Actuarial Sciences (Cass Busines School, City University London.",
+			"images": ["images/PhD.png"]
 		},
 		{
 			"title": "New literacies in teachers' educational. An analysis of curricular policies in Argentina",
 			"dates": "2013-2015",
 			"description": "PhD Research project. It involved the combination of quantitative and qualitative research to identify and map main theoretical perspectivs about new literacies in the curricular change in teachers' education, carried on in Argentina from 2007",
-			"images": ["images/Joel.png"]
+			"images": ["images/PhD.png"]
 		},
 		{
 			"title": "Ansenuza, a digital repository of teaching materials for teachers' education",
 			"dates": "2010-2013",
 			"description": "Led the development of Ansennuza, an open repository of educational materials, jointly developed by Universidad Nacional de Cordoba and Government of Cordoba.",
-			"images": ["images/Joel.png"]
+			"images": ["images/ansenuza.png"]
 		},
 		{
 			"title": "Enhancing University Teaching with New Technology (EUTNT)",
 			"dates": "2000- 2012",
 			"description": "Coordinated the local team at Universidad Nacional de Cordoba in an International research and innovation project.",
-			"images": ["images/Joel.png"]
+			"images": ["images/ProjectD.png"]
 		}
-		]
+	]
+};
 
-	};
+$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
+$("#header").prepend(HTMLbioPic.replace(/%data%/g, bio.pictureUrl));
+$("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
+$("#topContacts").append(HTMLmobile.replace(/%data%/g, bio.contacts.mobile));
+$("#topContacts").append(HTMLemail.replace(/%data%/g, bio.contacts.email));
 
-	var formattedName = HTMLheaderName.replace("%data%", bio.name);
-	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-	$("header").prepend(formattedRole);
-	$("header").prepend(formattedName);
-	
 
-    education.display = function() {
-    	for(school in education.schools) {
-    		$("#education").append(HTMLschoolStart);
-    		var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
-    		$("school-entry: last").append(formattedSchoolName);
-    		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-    		$("school-entry: last").append(formattedSchoolLocation);
-    		var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-    		$("school-entry: last").append(formattedSchoolDegree);
-    		var formattedSchoolMajors = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
-    		$("school-entry: last").append(formattedSchoolMajors);
-    		var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-    		$("school-entry: last").append(formattedSchoolDates);
-    	}
-		for(onlineCourse in education.onlineCourses) {
-    		$("#education").append(HTMLonlineClasses);
-    		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
-    		$("online-entry: last").append(formattedOnlineTitle);
-    		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
-    		$("online-entry: last").append(formattedSchoolLocation);
-    		var formattedOnlineDate = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
-    		$("online-entry: last").append(formattedOnlineDate);
-       		var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
-    		$("online-entry: last").append(formattedOnlineURL);
-    	}
-    };
+education.display = function() {
+	for(school in education.schools) {
+		var s = education.schools[school];
+		$("#education").append(
+			HTMLschoolEntry.
+			replace("%name%", s.name).replace("%dates%", s.dates).
+			replace("%url%", s.url).replace("%degree%", s.degree).
+			replace("%majors%", s.majors).replace("%location%", s.location)
+			);
+	}
+	$("#education").append(HTMLonlineClasses);
+	for(onlineCourse in education.onlineCourses) {
+		var s = education.onlineCourses[onlineCourse];
+		$("#education").append(
+			HTMLonlineEntry.
+			replace("%name%", s.school).replace("%dates%", s.dates).
+			replace("%url%", s.url).replace("%degree%", s.title)
+			);
+	}
+};
 
-    work.displayWork = function(){
-    	for(job in work.jobs) {
-    		$("#workExperience").append(HTMLworkStart);
-    		var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-    		$("work-entry: last").append(formattedWorkEmployer);
-    		var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-    		$("work-entry: last").append(formattedWorkTitle);
-    		var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-    		$("work-entry: last").append(formattedWorkDates);
-    		var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-    		$("work-entry: last").append(formattedWorkLocation);
-    		var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-    		$("work-entry: last").append(formattedWorkDescription);
+work.display = function(){
+	for(job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
+		var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		$(".work-entry:last").append(formattedWorkEmployer);
+		var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		$(".work-entry:last").append(formattedWorkTitle);
+		var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+		$(".work-entry:last").append(formattedWorkDates);
+		var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		$(".work-entry:last").append(formattedWorkLocation);
+		var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+		$(".work-entry:last").append(formattedWorkDescription);
+	}
+}
 
-    	}
-    }
+projects.display = function() {
+	for(project in projects.projects) {
+		var p = projects.projects[project];
+		$("#projects").append(HTMLprojectStart);
+		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", p.title);
+		$(".project-entry:last").append(formattedProjectTitle);
+		var formattedProjectDates = HTMLprojectDates.replace("%data%", p.dates);
+		$(".project-entry:last").append(formattedProjectDates);
+		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", p.description);
+		$(".project-entry:last").append(formattedProjectDescription);
+		if(p.images.length > 0) {
+			for(image in projects.projects[project].images) {
+				var formattedProjectImage = HTMLprojectImage.replace("%data%", p.images[image]);
+				$(".project-entry:last").append(formattedProjectImage);
+			}
+		}
+	}
+};
 
-    
-    projects.display = function() {
-    	for(project in projects.projects) {
-    		$("#projects").append(HTMLprojectStart);
-    		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-    		$("project-entry: last").append(formattedprojectTitle);
-    		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-    		$("work-entry: last").append(formattedWorkDates);
-    		var formattedProjectLocation = HTMLprojectLocation.replace("%data%", projects.projects[project].location);
-    		$("work-entry: last").append(formattedProjectLocation);
-    		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-    		$("work-entry: last").append(formattedProjectDescription);
-    		if(projects.projects[project].images.length > 0) {
-    			for(image in images) {
-    				var formattedProjectImages = HTMLprojectImages.replace("%data%", projects.projects[project].images);
-    				$("work-entry: last").append(formattedProjectImages);
-    			}
-	   		}
-       	}
-    };
 
-$(document).click(function(loc) {
-    	var x = loc.pageX;
-    	var y = loc.pageY;
+function inName(name) {
+	name = name.trim().split(" ");
+	name[1] = name[1].toUpperCase();
+	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+	return name[0] + " " + name[1];
+}
 
-    	logClicks(x,y); 
-    });
-
-    function inName(name) {
-    	name = name.trim().split(" ");
-    	name[1] = name[1].toUpperCase();
-    	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-    	return name[0] + " " + name[1];
-    }
-
-    $("#main").append(internationalizeButton);
-
+$("#main").append(internationalizeButton);
+$("#education").append(education.display());
+$("#workExperience").append(work.display());
+$("#projects").append(projects.display());
 $("#mapDiv").append(googleMap);
+
 
 
 
