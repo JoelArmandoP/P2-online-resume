@@ -87,18 +87,18 @@ var work = {
 		"description" : "Led the Educational Technology Department, which provides infrastructure, services, training and advice to academic staff."
 	},
 	{
-		"employer": "Judicial Power, Córdoba Goverment",
-		"title" : "Executive Coordinator of Centro de Perfeccionamiento R. Núñez",
+		"employer": "Centro de Perfeccionamiento R. Núñez. Judicial Power, Córdoba Goverment",
+		"title" : "Executive Coordinator",
 		"location" : "Córdoba, Argentina",
 		"dates" : "Feb 2012 - Jun 2013",
-		"description" : "Executive in charge of the education programme for the Judicial Power's Learning & Development area."
+		"description" : "Executive in charge of the education programmes for the Judicial Power's Learning & Development area."
 	}, 
 	{
 		"employer": "Universidad Nacional de Córdoba. School of Economics",
 		"title" : "Pedagogical Advisor in Distance Learning",
 		"location" : "Córdoba, Argentina",
 		"dates" : "Aug 1999 - Jan 2006",
-		"description" : "Program manager for distance learning courses. Provided advice in the design and production of courses and educational materials."
+		"description" : "Program manager and pedagogical advisor for distance learning courses. Provided advice in the design and production of courses and educational materials."
 	}
 	]
 };
