@@ -109,37 +109,37 @@ var projects = {
 			"title": "Arcade Game",
 			"dates": "2015",
 			"description": "Project developed as part of the Udacity Front-end developer nanodegree",
-			"images": ["images/ArcadeGame.png"]
+			"image": "images/ArcadeGame.png"
 		},
 		{
 			"title": "Neighborhood Map",
 			"dates": "2015",
 			"description": "Project developed as part of the Udacity Front-end developer nanodegree",
-			"images": ["images/NeighborhoodMap.png"]
+			"image": "images/NeighborhoodMap.png"
 		},
 		{
 			"title": "Working through statistics. A mobile application to enhance teaching and learning in Higher Education",
 			"dates": "2015-2016",
 			"description": "Research based design of a mobile application to enhance teaching and learning of statistics' concepts in the career of Actuarial Sciences (Cass Busines School, City University London.",
-			"images": ["images/PhD.png"]
+			"image": "images/PhD.png"
 		},
 		{
 			"title": "New literacies in teachers' educational. An analysis of curricular policies in Argentina",
 			"dates": "2013-2015",
 			"description": "PhD Research project. It involved the combination of quantitative and qualitative research to identify and map main theoretical perspectivs about new literacies in the curricular change in teachers' education, carried on in Argentina from 2007",
-			"images": ["images/PhD.png"]
+			"image": "images/PhD.png"
 		},
 		{
 			"title": "Ansenuza, a digital repository of teaching materials for teachers' education",
 			"dates": "2010-2013",
 			"description": "Led the development of Ansennuza, an open repository of educational materials, jointly developed by Universidad Nacional de Cordoba and Government of Cordoba.",
-			"images": ["images/ansenuza.png"]
+			"image": "images/ansenuza.png"
 		},
 		{
 			"title": "Enhancing University Teaching with New Technology (EUTNT)",
 			"dates": "2000- 2012",
 			"description": "Coordinated the local team at Universidad Nacional de Cordoba in an International research and innovation project.",
-			"images": ["images/ProjectD.png"]
+			"image": "images/ProjectD.png"
 		}
 	]
 };
@@ -192,19 +192,28 @@ work.display = function(){
 projects.display = function() {
 	for(project in projects.projects) {
 		var p = projects.projects[project];
-		$("#projects").append(HTMLprojectStart);
-		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", p.title);
-		$(".project-entry:last").append(formattedProjectTitle);
-		var formattedProjectDates = HTMLprojectDates.replace("%data%", p.dates);
-		$(".project-entry:last").append(formattedProjectDates);
-		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", p.description);
-		$(".project-entry:last").append(formattedProjectDescription);
-		if(p.images.length > 0) {
-			for(image in projects.projects[project].images) {
-				var formattedProjectImage = HTMLprojectImage.replace("%data%", p.images[image]);
-				$(".project-entry:last").append(formattedProjectImage);
-			}
-		}
+		var srcSet =
+			p.image.replace(/\.png$/g, "-large.png") + " 1024w, " +
+			p.image.replace(/\.png$/g, "-medium.png") + " 640w, " +
+			p.image.replace(/\.png$/g, "-small.png") + " 320w";
+		var projectID = "project-" + project;
+		$("#projects").append(
+			HTMLprojectEntry.
+			replace(/%title%/g, p.title).
+			replace(/%dates%/g, p.dates).
+			replace(/%image%/g, p.image).
+			replace(/%image-set%/g, srcSet).
+			replace(/%alt-text%/g, "Image for " + p.title).
+			replace(/%data-target%/g, "#" + projectID)
+			);
+		$("body").append(
+			HTMLprojectModal.replace(/%modal-id%/g, projectID).
+			replace(/%title%/g, p.title).
+			replace(/%image%/g, p.image).
+			replace(/%image-set%/g, srcSet).
+			replace(/%alt-text%/g, "Image for " + p.title).
+			replace(/%description%/g, p.description)
+			);
 	}
 };
 

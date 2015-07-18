@@ -36,11 +36,15 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+// TODO: sort out modals and alt.
+// Description belong in the modal
+var HTMLprojectEntry =
+  '<div class="col-md-4 project-entry">' +
+    '<a href="%url%">%title%</a>' +
+    '<div class="date-text">%dates%</div>' +
+    '<img class="img-responsive" src="%image%" srcset="%image-set%" sizes="100vw" ' +
+      'data-toggle="modal" data-target="%data-target%" alt="%alt-text%">'
+  '</div>';
 
 var HTMLschoolEntry = 
   '<div class="education-entry">' + 
@@ -56,6 +60,25 @@ var HTMLonlineEntry =
   '<div class="education-entry">' + 
     '<div class="online-name"><a href="%url%">%name% -- %degree%</a></div>' + 
     '<div class="date-text">%dates%</div>' +
+  '</div>';
+
+var HTMLprojectModal =
+  '<div class="modal fade" id="%modal-id%" tabindex="-1" role="dialog" ' +
+        'aria-labelledby="project-resume" aria-hidden="true">'+
+    '<div class="modal-dialog">' +
+      '<div class="modal-content">' +
+        '<div class="modal-header">' +
+          '<h4 class="modal-title">%title%</h4>' +
+        '</div>' +
+        '<div class="modal-body">' +
+          '<img class="img-responsive" src="%image%" srcset="%image-set%" sizes="100vw" alt="%alt-text%">' +
+          '%description%' +
+        '</div>' +
+        '<div class="modal-footer">' +
+          '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>' +
+        '</div>' +
+      '</div>' +
+    '</div>' +
   '</div>';
 
 
@@ -76,6 +99,7 @@ $(document).ready(function() {
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 */
+
 clickLocations = [];
 
 function logClicks(x,y) {
@@ -93,7 +117,6 @@ $(document).click(function(loc) {
   var y = loc.pageY;
   logClicks(x,y); 
 });
-
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
