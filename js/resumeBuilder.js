@@ -217,6 +217,15 @@ projects.display = function() {
 	}
 };
 
+bio.displayFooter = function() {
+	$("#footerContacts").append(
+		HTMLmobile.replace(/%data%/g, bio.contacts.mobile) +
+		HTMLemail.replace(/%data%/g, bio.contacts.email) +
+		HTMLtwitter.replace(/%data%/g, bio.contacts.twitter) +
+		HTMLgithub.replace(/%data%/g, bio.contacts.github) +
+		HTMLblog.replace(/%data%/g, bio.contacts.blog));
+};
+
 
 function inName(name) {
 	name = name.trim().split(" ");
@@ -226,9 +235,10 @@ function inName(name) {
 }
 
 $("#main").append(internationalizeButton);
-$("#education").append(education.display());
-$("#workExperience").append(work.display());
-$("#projects").append(projects.display());
+education.display();
+work.display();
+projects.display();
+bio.displayFooter();
 $("#mapDiv").append(googleMap);
 
 
