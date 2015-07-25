@@ -6,6 +6,7 @@ var bio = {
 		"email": "joelarma@gmail.com",
 		"github": "JoelArmandoP",
 		"twitter": "joelitaap",
+		"blog": "",
 		"location": "London"
 	},
 	"pictureUrl": "images/Joel.png",
@@ -69,7 +70,7 @@ var work = {
 		"employer": "City University London",
 		"title" : "Educational Technologist",
 		"location" : "London, UK",
-		"dates" : "May 2015- continue",
+		"dates" : "May 2015-continue",
 		"description" :  "As part of the Learning, Enhancement and Development Department, "+ 
 						"based at Cass School of Business, I provide pedagogical and technical support and develop research" + 
 						" and innovation projects in the use of educational technologies in Higher Education."			
@@ -78,7 +79,7 @@ var work = {
 		"employer": "LamMovil",
 		"title" : "E-learning Consultant",
 		"location" : "Working from home(London)",
-		"dates" : "Jan 2014 - Apr 2015",
+		"dates" : "Jan 2014-Apr 2015",
 		"description" :"Provided educational advice in e-learning for healthcare programs."
 
 	},
@@ -86,21 +87,21 @@ var work = {
 		"employer": "Universidad Nacional de Córdoba. School of Philosophy and Humanities",
 		"title" : "Director of the Educational Technology Department",
 		"location" : "Córdoba, Argentina",
-		"dates" : "Feb 2006 - Jun 2013",
+		"dates" : "Feb 2006-Jun 2013",
 		"description" : "Led the Educational Technology Department, which provides infrastructure, services, training and advice to academic staff."
 	},
 	{
 		"employer": "Centro de Perfeccionamiento R. Núñez. Judicial Power, Córdoba Goverment",
 		"title" : "Executive Coordinator",
 		"location" : "Córdoba, Argentina",
-		"dates" : "Feb 2012 - Jun 2013",
+		"dates" : "Feb 2012-Jun 2013",
 		"description" : "Executive in charge of the education programmes for the Judicial Power's Learning & Development area."
 	}, 
 	{
 		"employer": "Universidad Nacional de Córdoba. School of Economics",
 		"title" : "Pedagogical Advisor in Distance Learning",
 		"location" : "Córdoba, Argentina",
-		"dates" : "Aug 1999 - Jan 2006",
+		"dates" : "Aug 1999-Jan 2006",
 		"description" : "Program manager and pedagogical advisor for distance learning courses. Provided advice in the design and production of courses and educational materials."
 	}
 	]
@@ -149,7 +150,7 @@ var projects = {
 		},
 		{
 			"title": "Technologies in Higher Education",
-			"dates": "2000- 2012",
+			"dates": "2000-2012",
 			"description": "I managed the local team at Universidad Nacional de Cordoba in the project:"+
 							"Enhancing University Teaching with New Technology. This was an international research"+
 							" and innovation project, led by Universidad de Santiago de Compostela (Spain) and developed "+
