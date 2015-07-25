@@ -13,7 +13,7 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<div class="role">%data%</div>';
+var HTMLheaderRole = '<h2 id="role">%data%</h2>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
@@ -36,8 +36,7 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-// TODO: sort out modals and alt.
-// Description belong in the modal
+
 var HTMLprojectEntry =
   '<div class="col-md-4 project-entry">' +
     '<a href="%url%">%title%</a>' +
@@ -86,9 +85,6 @@ var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 
-/*
-The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
-*/
 $(document).ready(function() {
   $('button').click(function() {
     var iName = inName() || function(){};
@@ -97,7 +93,7 @@ $(document).ready(function() {
 });
 
 /*
-The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
+Clicks for the Collecting Click Locations.
 */
 
 clickLocations = [];

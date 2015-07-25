@@ -11,7 +11,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .clear-fix {
@@ -21,35 +21,40 @@ h6 {
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+  padding: 2.5% 5%;%;
 }
 
 h1 {
-  font-size: 40px;
-  color: #f5a623;
+  font-size: 50px;
+  color: #383838;
   line-height: 48px;
   display: inline;
+  text-transform: uppercase; 
+  font-family: "Oswald", bold;
 }
 
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #383838;
   line-height: 29px;
   padding: 10px;
+
 }
 
 h3 {
+  font-family: "bitter";
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #383838;
   line-height: 22px;
 }
 
 h4 {
+  font-family: "bitter";
   font-weight: bold;
   font-size: 14px;
-  color: #4a4a4a;
+  color: #383838;
   line-height: 17px;
 }
 
@@ -63,72 +68,85 @@ h5 {
 
 
 .date-text {
+  font-family: "Roboto";
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #A0A0A0;
   line-height: 16px;
   float: left;
+  padding: 5px 5%;
 }
 
 .location-text {
+  font-family: "Roboto";
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: ##084C8D;
   line-height: 16px;
   float: right;
 
 }
+.degree-major {
+  font-family: "Roboto";
+  font-style: italic;
+  font-size: 14px;
+  color: #393939;
+  line-height: 21px;
+}
 
 p {
+  font-family: "Roboto";
   font-size: 14px;
-  color: #333;
+  color: #393939;
   line-height: 21px;
 }
 
 a {
-  color: #1199c3;
+  font-family: "Roboto";
+  color: #6600FF; //1199c3
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 10px;  
 }
 
 .welcome-message {
+  font-family: "bitter";
   font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
+  color: #A0A0A0;
   line-height: 28px;
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #F3843E;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #A30013; 
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #A30013;
 }
 
-.white-text {
+.gray-text {
   font-weight: bold;
-  color: #fff;
+  color: #6E6E6E;
 }
 
 .gray {
-  background-color: #f3f3f3;
+  background-color: #D0CABF;
   padding-bottom: 10px;
   clear:both;
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #6E6E6E;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #FFF2E7;
 }
 
 .flex-box {
@@ -166,6 +184,13 @@ span {
 #lets-connect {
   text-align: center;
 }
+
+.modal-body {
+  font-family: "Roboto";
+}
+
+
+
 
 /* Media queries to handle various device widths */
 

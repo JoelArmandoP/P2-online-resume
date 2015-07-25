@@ -21,31 +21,32 @@ var education = {
 	{
 		"name": "Birkbeck College, University of London",
 		"location" : "London, UK",
-		"degree" : "MSc",
-		"majors" :  "Learning Technologies",
+		"degree" : "MSc in Learning Technologies",
+		"majors" :  ["Teaching and Learning with Technologies", "Research Methods in Learning Technologies", 
+					"Java", "Object Oriented Programming"],
 		"dates" : "2016",
 		"url": "http://www.dcs.bbk.ac.uk/courses/msclt/"
 	},
 	{
 		"name": "Universidad de Santiago de Compostela",
 		"location" : "Santiago de Compostela, Spain",
-		"degree" : "PhD",
-		"majors" :["Educational Technologies", "Curricular Policies"],
+		"degree" : "PhD in Education",
+		"majors" :["Educational Technologies", "Curricular Policies", "Educational Research"],
 		"dates" : "2015",
 		"url": "http://www.usc.es/es/centros/cptf/doutoramento/index.html"
 	},
 	{
 		"name": "Universidad Nacional de Córdoba. Centro de Estudios Avanzados",
 		"location" : "Córdoba, Argentina",
-		"degree" : "Master",
-		"majors" : ["Educational Research", "Mathematics Education"],
+		"degree" : "Master in Educational Research",
+		"majors" : ["Educational Research", "Mathematics Education", "Qualitative Research Methods"],
 		"dates" : "2009",
 		"url": "http://www.cea.unc.edu.ar/"
 	},
 	{
 		"name": "Universidad Nacional de Córdoba",
 		"location" : "Córdoba, Argentina",
-		"degree" : "BSc",
+		"degree" : "BSc in Educational Sciences",
 		"majors" : ["Educational theories", "Sociology", "Antropology", 
 		"History of Education", "Curriculum Design", "Learning Theories"],
 		"dates" : "2000",
@@ -69,7 +70,9 @@ var work = {
 		"title" : "Educational Technologist",
 		"location" : "London, UK",
 		"dates" : "May 2015- continue",
-		"description" :  "Educational Technologist. Learning, Enhancement and Development Department, based at Cass School of Business"			
+		"description" :  "As part of the Learning, Enhancement and Development Department, "+ 
+						"based at Cass School of Business, I provide pedagogical and technical support and develop research" + 
+						" and innovation projects in the use of educational technologies in Higher Education."			
 	},
 	{
 		"employer": "LamMovil",
@@ -108,48 +111,62 @@ var projects = {
 		{
 			"title": "Arcade Game",
 			"dates": "2015",
-			"description": "Project developed as part of the Udacity Front-end developer nanodegree",
-			"image": "images/ArcadeGame.png"
+			"description": "Project developed as part of the Udacity Front-end developer nanodegree. I was provided with visual assets"+
+							" and a game loop engine; using these tools I must add a number of entities to the game including"+
+							" the player characters and enemies to recreate the classic arcade game Frogger.",
+			"image": "images/ArcadeGame.png" //TODO: replace for real image.
 		},
 		{
 			"title": "Neighborhood Map",
 			"dates": "2015",
-			"description": "Project developed as part of the Udacity Front-end developer nanodegree",
-			"image": "images/NeighborhoodMap.png"
+			"description": "Project developed as part of the Udacity Front-end developer nanodegree. I developed a single-page application"+
+							" featuring a map of my neighborhood. I add additional functionality to this application, "+
+							"including: map markers, a search function, and a listview. "+
+							"I researched and implemented third-party APIs that provide additional information about each of these locations.",
+			"image": "images/NeighborhoodMap.png" //TODO: replace for real image.
 		},
 		{
-			"title": "Working through statistics. A mobile application to enhance teaching and learning in Higher Education",
+			"title": "Working-through statistics",
 			"dates": "2015-2016",
-			"description": "Research based design of a mobile application to enhance teaching and learning of statistics' concepts in the career of Actuarial Sciences (Cass Busines School, City University London.",
-			"image": "images/PhD.png"
+			"description": "MSc in Learning Technologies' dissertation. It consists in the development of a mobile application to enhance "+
+							"teaching and learning of Statistics. It's a research-based design carried on in "+ 
+							"the career of Actuarial Sciences (Cass Busines School, City University London).",
+			"image": "images/MSc.png" //TODO: replace for real image.
 		},
 		{
-			"title": "New literacies in teachers' educational. An analysis of curricular policies in Argentina",
+			"title": "New literacies in teachers' education",
 			"dates": "2013-2015",
-			"description": "PhD Research project. It involved the combination of quantitative and qualitative research to identify and map main theoretical perspectivs about new literacies in the curricular change in teachers' education, carried on in Argentina from 2007",
+			"description": "PhD research project. It involved the combination of quantitative and qualitative research to identify and map main "+
+							"theoretical perspectivs about new literacies in the curricular change in teachers' education, carried on in Argentina between 2007-2010",
 			"image": "images/PhD.png"
 		},
 		{
-			"title": "Ansenuza, a digital repository of teaching materials for teachers' education",
+			"title": "Ansenuza",
 			"dates": "2010-2013",
-			"description": "Led the development of Ansennuza, an open repository of educational materials, jointly developed by Universidad Nacional de Cordoba and Government of Cordoba.",
+			"description": "I co-directed the development of Ansenuza, an open digital repository of educational materials,"+
+							"This project was jointly developed by Universidad Nacional de Cordoba and Government of Cordoba.",
 			"image": "images/ansenuza.png"
 		},
 		{
-			"title": "Enhancing University Teaching with New Technology (EUTNT)",
+			"title": "Technologies in Higher Education",
 			"dates": "2000- 2012",
-			"description": "Coordinated the local team at Universidad Nacional de Cordoba in an International research and innovation project.",
+			"description": "I managed the local team at Universidad Nacional de Cordoba in the project:"+
+							"Enhancing University Teaching with New Technology. This was an international research"+
+							" and innovation project, led by Universidad de Santiago de Compostela (Spain) and developed "+
+							"at Universidad Nacional de Córdoba (Argentina)",
 			"image": "images/ProjectD.png"
 		}
 	]
 };
-
+$("#header").prepend(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
 $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
 $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
-$("#header").prepend(HTMLbioPic.replace(/%data%/g, bio.pictureUrl));
-$("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
+//I left this commented in case I want to display my oicture later.
+//$("#header").prepend(HTMLbioPic.replace(/%data%/g, bio.pictureUrl));
 $("#topContacts").append(HTMLmobile.replace(/%data%/g, bio.contacts.mobile));
 $("#topContacts").append(HTMLemail.replace(/%data%/g, bio.contacts.email));
+
+
 
 
 education.display = function() {
