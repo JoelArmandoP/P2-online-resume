@@ -21,7 +21,7 @@ var HTMLemail = '<li class="flex-item"><span class="red-text entypo-mail"></span
 var HTMLtwitter = '<li class="flex-item"><span class="red-text entypo-twitter"></span><span class="white-text">%data%</span></li>';
 var HTMLgithub = '<li class="flex-item"><span class="red-text entypo-github"></span><span class="white-text">%data%</span></li>';
 var HTMLblog = '<li class="flex-item"><span class="red-text entypo-pencil"></span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="red-text" entypo-location></span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="red-text fontawesome-globe"></span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
@@ -29,12 +29,14 @@ var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
-var HTMLworkStart = '<div class="col-md-6 work-entry"></div>';
-var HTMLworkEmployer = '<div class="job-name"><a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a></div>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkEntry =
+  '<div class="col-md-6 work-entry">'+
+    '<div class="job-name">%title%</div>'+
+    '<div class="employer">%employer%</div>'+
+    '<div class="date-text">%dates%</div>'+
+    '<div class="location-text">%location%</div>'+
+    '<p><br>%description%</p>'
+  '</div>';
 
 
 var HTMLprojectEntry =
@@ -47,17 +49,17 @@ var HTMLprojectEntry =
 
 var HTMLschoolEntry = 
   '<div class="col-md-6 education-entry">' + 
-    '<div class="education-name"><a href="%url%">%name% -- %degree%</a></div>' + 
+    '<div class="education-name"><a href="%url%">%name% - %degree%</a></div>' + 
     '<div class="location-text">%location%</div>' +
     '<div class="date-text">%dates%</div>' +
-    '<div class="degree-major">%subjects%</div>' +
+    '<div class="degree-major">%majors%</div>' +
   '</div>';
 
 var HTMLonlineClasses = '<h3 class= "col-md-12">Online Classes</h3>';
 
 var HTMLonlineEntry = 
   '<div class="col-md-12 education-entry">' + 
-    '<div class="online-name"><a href="%url%">%name% -- %degree%</a></div>' + 
+    '<div class="online-name"><a href="%url%">%name% - %degree%</a></div>' + 
     '<div class="date-text">%dates%</div>' +
   '</div>';
 

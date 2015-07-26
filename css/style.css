@@ -43,7 +43,7 @@ hr {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 60px;
   line-height: 48px;
   display: inline;
   text-transform: uppercase; 
@@ -55,7 +55,7 @@ h2 {
   font-size: 24px;
   line-height: 29px;
   padding: 10px;
-
+  border-bottom: 2px solid #333;
 }
 
 h3 {
@@ -86,9 +86,9 @@ h5 {
   font-style: italic;
   font-size: 14px;
   color: #A0A0A0;
-  line-height: 16px;
+  line-height: 18px;
   float: left;
-  padding: 5px 5%; //TODO: Check, there must be a better way;
+  padding-right: 10px; //TODO: Check, there must be a better way;
 }
 
 .location-text {
@@ -96,7 +96,7 @@ h5 {
   font-style: italic;
   font-size: 14px;
   color: ##084C8D;
-  line-height: 16px;
+  line-height: 18px;
   float: right;
 
 }
@@ -105,36 +105,8 @@ h5 {
   font-style: italic;
   font-size: 14px;
   color: #393939;
-  line-height: 21px;
-}
-
-/*.date-text {
-  font-family: "Roboto";
-  font-style: italic;
-  font-size: 14px;
-  color: #A0A0A0;
   line-height: 16px;
-  float: left;
-  padding: 5px 5%; //TODO: Check, there must be a better way;
 }
-
-.location-text {
-  font-family: "Roboto";
-  font-style: italic;
-  font-size: 14px;
-  color: ##084C8D;
-  line-height: 16px;
-  float: right;
-
-}
-.degree-major {
-  font-family: "Roboto";
-  font-style: italic;
-  font-size: 14px;
-  color: #393939;
-  line-height: 21px;
-}
-*/
 
 p {
   font-family: "Roboto";
@@ -145,8 +117,10 @@ p {
 
 a {
   font-family: "Roboto";
-  color: #6600FF; //1199c3
+  color: #6600FF; 
   text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
   margin-top: 10px;  
 }
 
@@ -194,7 +168,6 @@ a {
   padding-left: 50px;
   padding-right: 10px;
 }
-*/
 /*Padding doesn't work*/
 
 .flex-box {
@@ -208,6 +181,7 @@ a {
 
 .center-content {
   padding: 2.5% 5%;
+  align-text: left; 
 }
 
 ul {

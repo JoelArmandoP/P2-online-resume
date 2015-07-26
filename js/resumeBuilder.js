@@ -7,7 +7,7 @@ var bio = {
 		"github": "JoelArmandoP",
 		"twitter": "joelitaap",
 		"blog": "",
-		"location": "London"
+		"location": "London, UK"
 	},
 	"pictureUrl": "images/Joel.png",
 	"welcomeMsg": "Educational technologist with extensive experience in educational research " +
@@ -16,47 +16,44 @@ var bio = {
 
 };
 
-//change majors to subjects since in Argentina and UK majors is not used to describe a career.
 var education = {
 	"schools": [
 	{
 		"name": "Birkbeck College, University of London",
 		"location" : "London, UK",
-		"degree" : "MSc in Learning Technologies",
-		"subjects" :  ["Teaching and Learning with Technologies", "Research Methods in Learning Technologies", 
-					"Java", "Object Oriented Programming"],
+		"degree" : "MSc",
+		"majors" :  ["Learning Technologies"],
 		"dates" : "2016",
 		"url": "http://www.dcs.bbk.ac.uk/courses/msclt/"
 	},
 	{
 		"name": "Universidad de Santiago de Compostela",
 		"location" : "Santiago de Compostela, Spain",
-		"degree" : "PhD in Education",
-		"subjects" :["Educational Technologies", "Curricular Policies", "Educational Research"],
+		"degree" : "PhD",
+		"majors" :["Education"],
 		"dates" : "2015",
 		"url": "http://www.usc.es/es/centros/cptf/doutoramento/index.html"
 	},
 	{
-		"name": "Universidad Nacional de Córdoba. Centro de Estudios Avanzados",
+		"name": "Universidad Nacional de Córdoba",
 		"location" : "Córdoba, Argentina",
-		"degree" : "Master in Educational Research",
-		"subjects" : ["Educational Research", "Mathematics Education", "Qualitative Research Methods"],
+		"degree" : "Master",
+		"majors" : ["Educational Research"],
 		"dates" : "2009",
 		"url": "http://www.cea.unc.edu.ar/"
 	},
 	{
 		"name": "Universidad Nacional de Córdoba",
 		"location" : "Córdoba, Argentina",
-		"degree" : "BSc in Educational Sciences",
-		"subjects" : ["Educational theories", "Sociology", "Antropology", 
-		"History of Education", "Curriculum Design", "Learning Theories"],
+		"degree" : "BSc",
+		"majors" : ["Educational Sciences"],
 		"dates" : "2000",
 		"url": "http://www.unc.edu.ar"
 	}
 	],
 	"onlineCourses": [
 	{
-		"title": "Front-end nanodegree",
+		"title": "Front-End Web Developer Nanodegree",
 		"school": "Udacity",
 		"dates": "2015",
 		"url": "http://www.udacity.com"
@@ -115,7 +112,8 @@ var projects = {
 			"description": "Project developed as part of the Udacity Front-end developer nanodegree. I was provided with visual assets"+
 							" and a game loop engine; using these tools I must add a number of entities to the game including"+
 							" the player characters and enemies to recreate the classic arcade game Frogger.",
-			"image": "images/ArcadeGame.png" //TODO: replace for real image.
+			"image": "images/ArcadeGame.png", //TODO: replace for real image.
+			"url": "https://github.com/JoelArmandoP/P3-Classic-Arcade-Game"
 		},
 		{
 			"title": "Neighborhood Map",
@@ -124,7 +122,8 @@ var projects = {
 							" featuring a map of my neighborhood. I add additional functionality to this application, "+
 							"including: map markers, a search function, and a listview. "+
 							"I researched and implemented third-party APIs that provide additional information about each of these locations.",
-			"image": "images/NeighborhoodMap.png" //TODO: replace for real image.
+			"image": "images/NeighborhoodMap.png", //TODO: replace for real image.
+			"url": "https://github.com/JoelArmandoP/P5-Neighborhood-Map-Project"
 		},
 		{
 			"title": "Working-through statistics",
@@ -132,21 +131,26 @@ var projects = {
 			"description": "MSc in Learning Technologies' dissertation. It consists in the development of a mobile application to enhance "+
 							"teaching and learning of Statistics. It's a research-based design carried on in "+ 
 							"the career of Actuarial Sciences (Cass Busines School, City University London).",
-			"image": "images/MSc.png" //TODO: replace for real image.
-		},
+			"image": "images/MSc.png", //TODO: replace for real image.
+			"url": "http://ansenuza.ffyh.unc.edu.ar/"//TODO replace for real url
+		}
+//I decided not to include the following projects, because are not web-dev projects. 
+		/*, 
 		{
 			"title": "New literacies in teachers' education",
 			"dates": "2013-2015",
 			"description": "PhD research project. It involved the combination of quantitative and qualitative research to identify and map main "+
 							"theoretical perspectivs about new literacies in the curricular change in teachers' education, carried on in Argentina between 2007-2010",
-			"image": "images/PhD.png"
+			"image": "images/PhD.png",
+			"url": "https://www.academia.edu/964828/Las_nuevas_alfabetizaciones_en_la_formaci%C3%B3n_docente_inicial._Cartograf%C3%ADa_de_las_perspectivas_te%C3%B3ricas_dominantes_en_el_contexto_internacional"
 		},
 		{
 			"title": "Ansenuza",
 			"dates": "2010-2013",
 			"description": "I co-directed the development of Ansenuza, an open digital repository of educational materials,"+
 							"This project was jointly developed by Universidad Nacional de Cordoba and Government of Cordoba.",
-			"image": "images/ansenuza.png"
+			"image": "images/ansenuza.png",
+			"url": "http://ansenuza.ffyh.unc.edu.ar/"
 		},
 		{
 			"title": "Technologies in Higher Education",
@@ -155,17 +159,21 @@ var projects = {
 							"Enhancing University Teaching with New Technology. This was an international research"+
 							" and innovation project, led by Universidad de Santiago de Compostela (Spain) and developed "+
 							"at Universidad Nacional de Córdoba (Argentina)",
-			"image": "images/ProjectD.png"
-		}
+			"image": "images/ProjectD.png",
+			"url": "http://unisic.usc.es/index.php?option=com_content&view=article&id=39&Itemid=5/"
+
+		}*/
 	]
 };
-$("#header").prepend(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
-$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
-$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
-//I left this commented in case I want to display my oicture later.
+$("#name").prepend(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
+$("#name").prepend(HTMLheaderRole.replace("%data%", bio.role));
+$("#name").prepend(HTMLheaderName.replace("%data%", bio.name));
+//I left this commented in case I want to display my picture later.
 //$("#header").prepend(HTMLbioPic.replace(/%data%/g, bio.pictureUrl));
 $("#topContacts").append(HTMLmobile.replace(/%data%/g, bio.contacts.mobile));
 $("#topContacts").append(HTMLemail.replace(/%data%/g, bio.contacts.email));
+$("#topContacts").append(HTMLgithub.replace(/%data%/g, bio.contacts.github));
+$("#topContacts").append(HTMLlocation.replace(/%data%/g, bio.contacts.location));
 
 
 
@@ -177,7 +185,7 @@ education.display = function() {
 			HTMLschoolEntry.
 			replace("%name%", s.name).replace("%dates%", s.dates).
 			replace("%url%", s.url).replace("%degree%", s.degree).
-			replace("%subjects%", s.subjects).replace("%location%", s.location)
+			replace("%majors%", s.majors).replace("%location%", s.location)
 			);
 	}
 	$("#education").append(HTMLonlineClasses);
@@ -193,17 +201,11 @@ education.display = function() {
 
 work.display = function(){
 	for(job in work.jobs) {
-		$("#workExperience").append(HTMLworkStart);
-		var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		$(".work-entry:last").append(formattedWorkEmployer);
-		var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-		$(".work-entry:last").append(formattedWorkTitle);
-		var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-		$(".work-entry:last").append(formattedWorkDates);
-		var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-		$(".work-entry:last").append(formattedWorkLocation);
-		var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-		$(".work-entry:last").append(formattedWorkDescription);
+		var s = work.jobs[job];
+		$("#workExperience").append(HTMLworkEntry.
+		replace("%employer%", s.employer).replace("%title%", work.jobs[job].title).
+		replace("%dates%", work.jobs[job].dates).replace("%location%", work.jobs[job].location).
+		replace("%description%", work.jobs[job].description));
 	}
 }
 
@@ -222,7 +224,8 @@ projects.display = function() {
 			replace(/%image%/g, p.image).
 			replace(/%image-set%/g, srcSet).
 			replace(/%alt-text%/g, "Image for " + p.title).
-			replace(/%data-target%/g, "#" + projectID)
+			replace(/%data-target%/g, "#" + projectID).
+			replace(/%url%/g, p.url)
 			);
 		$("body").append(
 			HTMLprojectModal.replace(/%modal-id%/g, projectID).
