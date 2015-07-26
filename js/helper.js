@@ -12,16 +12,16 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
+var HTMLheaderName = '<h1 id="name" class= "red-text">%data%</h1>';
 var HTMLheaderRole = '<h2 id="role">%data%</h2><hr/>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text entypo-phone"></span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text entypo-mail"></span><span class="white-text"><a href="mailto:%data%">%data%</a></span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text entypo-twitter"></span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text entypo-github"></span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text entypo-pencil"></span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text" entypo-location></span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item"><span class="red-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span class="red-text entypo-phone"></span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="red-text entypo-mail"></span><span class="white-text"><a href="mailto:%data%">%data%</a></span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="red-text entypo-twitter"></span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="red-text entypo-github"></span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li class="flex-item"><span class="red-text entypo-pencil"></span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="red-text" entypo-location></span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
@@ -29,7 +29,7 @@ var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
-var HTMLworkStart = '<div class="work-entry"></div>';
+var HTMLworkStart = '<div class="col-md-6 work-entry"></div>';
 var HTMLworkEmployer = '<div class="job-name"><a href="#">%data%';
 var HTMLworkTitle = ' - %data%</a></div>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
@@ -46,17 +46,17 @@ var HTMLprojectEntry =
   '</div>';
 
 var HTMLschoolEntry = 
-  '<div class="education-entry">' + 
+  '<div class="col-md-6 education-entry">' + 
     '<div class="education-name"><a href="%url%">%name% -- %degree%</a></div>' + 
     '<div class="location-text">%location%</div>' +
     '<div class="date-text">%dates%</div>' +
-    '<div class="degree-major">%majors%</div>' +
+    '<div class="degree-major">%subjects%</div>' +
   '</div>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClasses = '<h3 class= "col-md-12">Online Classes</h3>';
 
 var HTMLonlineEntry = 
-  '<div class="education-entry">' + 
+  '<div class="col-md-12 education-entry">' + 
     '<div class="online-name"><a href="%url%">%name% -- %degree%</a></div>' + 
     '<div class="date-text">%dates%</div>' +
   '</div>';

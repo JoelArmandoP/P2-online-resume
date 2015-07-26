@@ -16,14 +16,14 @@ var bio = {
 
 };
 
-
+//change majors to subjects since in Argentina and UK majors is not used to describe a career.
 var education = {
 	"schools": [
 	{
 		"name": "Birkbeck College, University of London",
 		"location" : "London, UK",
 		"degree" : "MSc in Learning Technologies",
-		"majors" :  ["Teaching and Learning with Technologies", "Research Methods in Learning Technologies", 
+		"subjects" :  ["Teaching and Learning with Technologies", "Research Methods in Learning Technologies", 
 					"Java", "Object Oriented Programming"],
 		"dates" : "2016",
 		"url": "http://www.dcs.bbk.ac.uk/courses/msclt/"
@@ -32,7 +32,7 @@ var education = {
 		"name": "Universidad de Santiago de Compostela",
 		"location" : "Santiago de Compostela, Spain",
 		"degree" : "PhD in Education",
-		"majors" :["Educational Technologies", "Curricular Policies", "Educational Research"],
+		"subjects" :["Educational Technologies", "Curricular Policies", "Educational Research"],
 		"dates" : "2015",
 		"url": "http://www.usc.es/es/centros/cptf/doutoramento/index.html"
 	},
@@ -40,7 +40,7 @@ var education = {
 		"name": "Universidad Nacional de Córdoba. Centro de Estudios Avanzados",
 		"location" : "Córdoba, Argentina",
 		"degree" : "Master in Educational Research",
-		"majors" : ["Educational Research", "Mathematics Education", "Qualitative Research Methods"],
+		"subjects" : ["Educational Research", "Mathematics Education", "Qualitative Research Methods"],
 		"dates" : "2009",
 		"url": "http://www.cea.unc.edu.ar/"
 	},
@@ -48,7 +48,7 @@ var education = {
 		"name": "Universidad Nacional de Córdoba",
 		"location" : "Córdoba, Argentina",
 		"degree" : "BSc in Educational Sciences",
-		"majors" : ["Educational theories", "Sociology", "Antropology", 
+		"subjects" : ["Educational theories", "Sociology", "Antropology", 
 		"History of Education", "Curriculum Design", "Learning Theories"],
 		"dates" : "2000",
 		"url": "http://www.unc.edu.ar"
@@ -177,7 +177,7 @@ education.display = function() {
 			HTMLschoolEntry.
 			replace("%name%", s.name).replace("%dates%", s.dates).
 			replace("%url%", s.url).replace("%degree%", s.degree).
-			replace("%majors%", s.majors).replace("%location%", s.location)
+			replace("%subjects%", s.subjects).replace("%location%", s.location)
 			);
 	}
 	$("#education").append(HTMLonlineClasses);
