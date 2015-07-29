@@ -134,7 +134,7 @@ var projects = {
 			"image": "images/MSc.png", //TODO: replace for real image.
 			"url": "http://ansenuza.ffyh.unc.edu.ar/"//TODO replace for real url
 		}
-//I decided not to include the following projects, because are not web-dev projects. 
+//I decided not to include the following projects, because are not web-dev related. 
 		/*, 
 		{
 			"title": "New literacies in teachers' education",
@@ -198,6 +198,12 @@ education.display = function() {
 			);
 	}
 };
+skills.display = function() {
+	for(skill in bio.skills[skill]) {
+		var s = bio.skills[skill];
+		S
+	}
+}
 
 work.display = function(){
 	for(job in work.jobs) {

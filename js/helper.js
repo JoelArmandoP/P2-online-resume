@@ -30,7 +30,7 @@ var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkEntry =
-  '<div class="col-md-6 work-entry">'+
+  '<div class="col-md-4 work-entry">'+
     '<div class="job-name">%title%</div>'+
     '<div class="employer">%employer%</div>'+
     '<div class="date-text">%dates%</div>'+
@@ -193,7 +193,7 @@ function initializeMap() {
       content: name
     });
 
-    // hmmmm, I wonder what this is about...
+    // Opens an infowindow when a map marker is clicked
     google.maps.event.addListener(marker, 'click', function() {
       infowindow.open(map, marker);
     });
