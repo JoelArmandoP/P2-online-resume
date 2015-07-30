@@ -20,7 +20,7 @@ var HTMLmobile = '<li class="flex-item"><span class="red-text entypo-phone"></sp
 var HTMLemail = '<li class="flex-item"><span class="red-text entypo-mail"></span><span class="white-text"><a href="mailto:%data%">%data%</a></span></li>';
 var HTMLtwitter = '<li class="flex-item"><span class="red-text entypo-twitter"></span><span class="white-text">%data%</span></li>';
 var HTMLgithub = '<li class="flex-item"><span class="red-text entypo-github"></span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="red-text entypo-pencil"></span><span class="white-text">%data%</span></li>';
+//var HTMLblog = '<li class="flex-item"><span class="red-text entypo-pencil"></span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="red-text fontawesome-globe"></span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
@@ -30,7 +30,7 @@ var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkEntry =
-  '<div class="col-md-4 work-entry">'+
+  '<div class="col-md-6 work-entry">'+
     '<div class="job-name">%title%</div>'+
     '<div class="employer">%employer%</div>'+
     '<div class="date-text">%dates%</div>'+

@@ -6,7 +6,6 @@ var bio = {
 		"email": "joelarma@gmail.com",
 		"github": "JoelArmandoP",
 		"twitter": "joelitaap",
-		"blog": "",
 		"location": "London, UK"
 	},
 	"pictureUrl": "images/Joel.png",
@@ -69,15 +68,17 @@ var work = {
 		"location" : "London, UK",
 		"dates" : "May 2015-continue",
 		"description" :  "As part of the Learning, Enhancement and Development Department, "+ 
-						"based at Cass School of Business, I provide pedagogical and technical support and develop research" + 
-						" and innovation projects in the use of educational technologies in Higher Education."			
+						"based at Cass School of Business, I provide pedagogical and technical support for lecturers and professional staff"+
+						" As part of my duties I develop research and innovation projects in the use of educational technologies in Higher Education."			
 	},
 	{
 		"employer": "LamMovil",
 		"title" : "E-learning Consultant",
 		"location" : "Working from home(London)",
 		"dates" : "Jan 2014-Apr 2015",
-		"description" :"Provided educational advice in e-learning for healthcare programs."
+		"description" :"Provided educational advice in e-learning for healthcare programs. Designed the general strategy for the use"+ 
+						" of different technologies: Content Management System (CMS), Virtual Learning Environment (VLE), Video recording,"+
+						" Social Media. Responsible for moodle adminitration and training and advice for tutors in the use of Moodle."
 
 	},
 	{
@@ -85,15 +86,28 @@ var work = {
 		"title" : "Director of the Educational Technology Department",
 		"location" : "Córdoba, Argentina",
 		"dates" : "Feb 2006-Jun 2013",
-		"description" : "Led the Educational Technology Department, which provides infrastructure, services, training and advice to academic staff."
+		"description" : "Led the Educational Technology Department, which provides infrastructure, services, "+
+						"training and advice to academic staff. I managed a fifteen-person multi-dis­ciplinary team and conducted international research and"+
+						" innovation projects."
 	},
 	{
 		"employer": "Centro de Perfeccionamiento R. Núñez. Judicial Power, Córdoba Goverment",
 		"title" : "Executive Coordinator",
 		"location" : "Córdoba, Argentina",
 		"dates" : "Feb 2012-Jun 2013",
-		"description" : "Executive in charge of the education programmes for the Judicial Power's Learning & Development area."
+		"description" : "Executive in charge of the education programmes for the Judicial Power's Learning & Development area."+
+						"Designed and implemented the Virtual Campus and integrated it to existing technologies. In one year, "+ 
+						"I was responsible for creating new capabilities in the existing team and designed and started execution of two new on line postgraduate careers"
 	}, 
+	{
+		"employer": "“Conectar Igualdad” Programme, Ministry of Education, Argentina",
+		"title": "Member of the Advisory Council",
+		"location": "Buenos Aires, Argentina",
+		"dates": "2010-2011",
+		"description": "I provided pedagogical advice to “Conectar Igualdad,” Argentina's plan to"+
+						"deliver three million netbooks to all of its secondary school­children. I co-drafted the Council's report"+
+						"on general guidelines for the execution of digital inclusion policies"
+	},
 	{
 		"employer": "Universidad Nacional de Córdoba. School of Economics",
 		"title" : "Pedagogical Advisor in Distance Learning",
@@ -134,7 +148,7 @@ var projects = {
 			"image": "images/MSc.png", //TODO: replace for real image.
 			"url": "http://ansenuza.ffyh.unc.edu.ar/"//TODO replace for real url
 		}
-//I decided not to include the following projects, because are not web-dev related. 
+//I decided not to include the following projects, because they are not web-dev related. 
 		/*, 
 		{
 			"title": "New literacies in teachers' education",
@@ -165,8 +179,17 @@ var projects = {
 		}*/
 	]
 };
-$("#name").prepend(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
-$("#name").prepend(HTMLheaderRole.replace("%data%", bio.role));
+//A dictionary to store locations with descriptions
+/*var loc = [
+			{name:"Córdoba, Argentina", description:"Universidad Nacional de Córdoba is "},
+			{name:"Santiago de Compostela, Spain", description:"value2"},
+			{name:"Buenos Aires, Argentina", description:"value2"},
+			{name:"London, UK", description:"value2"}
+			];
+*/
+
+$("#role").prepend(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
+$("#role").prepend(HTMLheaderRole.replace("%data%", bio.role));
 $("#name").prepend(HTMLheaderName.replace("%data%", bio.name));
 //I left this commented in case I want to display my picture later.
 //$("#header").prepend(HTMLbioPic.replace(/%data%/g, bio.pictureUrl));
@@ -249,8 +272,7 @@ bio.displayFooter = function() {
 		HTMLmobile.replace(/%data%/g, bio.contacts.mobile) +
 		HTMLemail.replace(/%data%/g, bio.contacts.email) +
 		HTMLtwitter.replace(/%data%/g, bio.contacts.twitter) +
-		HTMLgithub.replace(/%data%/g, bio.contacts.github) +
-		HTMLblog.replace(/%data%/g, bio.contacts.blog));
+		HTMLgithub.replace(/%data%/g, bio.contacts.github));
 };
 
 
