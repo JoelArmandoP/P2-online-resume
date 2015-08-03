@@ -6,7 +6,7 @@ var bio = {
 		"email": "joelarma@gmail.com",
 		"github": "JoelArmandoP",
 		"twitter": "joelitaap",
-		"location": "London, UK"
+		"location": "LON"
 	},
 	"pictureUrl": "images/Joel.png",
 	"welcomeMsg": "Educational technologist with extensive experience in educational research " +
@@ -19,7 +19,7 @@ var education = {
 	"schools": [
 	{
 		"name": "Birkbeck College, University of London",
-		"location" : "London, UK",
+		"location" : "LON",
 		"degree" : "MSc",
 		"majors" :  ["Learning Technologies"],
 		"dates" : "2016",
@@ -27,7 +27,7 @@ var education = {
 	},
 	{
 		"name": "Universidad de Santiago de Compostela",
-		"location" : "Santiago de Compostela, Spain",
+		"location" : "SCQ",
 		"degree" : "PhD",
 		"majors" :["Education"],
 		"dates" : "2015",
@@ -35,7 +35,7 @@ var education = {
 	},
 	{
 		"name": "Universidad Nacional de Córdoba",
-		"location" : "Córdoba, Argentina",
+		"location" : "COR",
 		"degree" : "Master",
 		"majors" : ["Educational Research"],
 		"dates" : "2009",
@@ -43,7 +43,7 @@ var education = {
 	},
 	{
 		"name": "Universidad Nacional de Córdoba",
-		"location" : "Córdoba, Argentina",
+		"location" : "COR",
 		"degree" : "BSc",
 		"majors" : ["Educational Sciences"],
 		"dates" : "2000",
@@ -65,7 +65,7 @@ var work = {
 	{
 		"employer": "City University London",
 		"title" : "Educational Technologist",
-		"location" : "London, UK",
+		"location" : "LON",
 		"dates" : "May 2015-continue",
 		"description" :  "As part of the Learning, Enhancement and Development Department, "+ 
 						"based at Cass School of Business, I provide pedagogical and technical support for lecturers and professional staff"+
@@ -74,17 +74,17 @@ var work = {
 	{
 		"employer": "LamMovil",
 		"title" : "E-learning Consultant",
-		"location" : "Working from home(London)",
+		"location" : "LON",
 		"dates" : "Jan 2014-Apr 2015",
 		"description" :"Provided educational advice in e-learning for healthcare programs. Designed the general strategy for the use"+ 
 						" of different technologies: Content Management System (CMS), Virtual Learning Environment (VLE), Video recording,"+
-						" Social Media. Responsible for moodle adminitration and training and advice for tutors in the use of Moodle."
+						" Social Media. Responsible for moodle administration and training and advice for tutors in the use of Moodle."
 
 	},
 	{
 		"employer": "Universidad Nacional de Córdoba. School of Philosophy and Humanities",
 		"title" : "Director of the Educational Technology Department",
-		"location" : "Córdoba, Argentina",
+		"location" : "COR",
 		"dates" : "Feb 2006-Jun 2013",
 		"description" : "Led the Educational Technology Department, which provides infrastructure, services, "+
 						"training and advice to academic staff. I managed a fifteen-person multi-dis­ciplinary team and conducted international research and"+
@@ -93,16 +93,16 @@ var work = {
 	{
 		"employer": "Centro de Perfeccionamiento R. Núñez. Judicial Power, Córdoba Goverment",
 		"title" : "Executive Coordinator",
-		"location" : "Córdoba, Argentina",
+		"location" : "COR",
 		"dates" : "Feb 2012-Jun 2013",
 		"description" : "Executive in charge of the education programmes for the Judicial Power's Learning & Development area."+
-						"Designed and implemented the Virtual Campus and integrated it to existing technologies. In one year, "+ 
+						" Designed and implemented the Virtual Campus and integrated it to existing technologies. "+ 
 						"I was responsible for creating new capabilities in the existing team and designed and started execution of two new on line postgraduate careers"
 	}, 
 	{
 		"employer": "“Conectar Igualdad” Programme, Ministry of Education, Argentina",
 		"title": "Member of the Advisory Council",
-		"location": "Buenos Aires, Argentina",
+		"location": "BUE",
 		"dates": "2010-2011",
 		"description": "I provided pedagogical advice to “Conectar Igualdad,” Argentina's plan to"+
 						"deliver three million netbooks to all of its secondary school­children. I co-drafted the Council's report"+
@@ -111,7 +111,7 @@ var work = {
 	{
 		"employer": "Universidad Nacional de Córdoba. School of Economics",
 		"title" : "Pedagogical Advisor in Distance Learning",
-		"location" : "Córdoba, Argentina",
+		"location" : "COR",
 		"dates" : "Aug 1999-Jan 2006",
 		"description" : "Program manager and pedagogical advisor for distance learning courses. Provided advice in the design and production of courses and educational materials."
 	}
@@ -180,13 +180,12 @@ var projects = {
 	]
 };
 //A dictionary to store locations with descriptions
-/*var loc = [
-			{name:"Córdoba, Argentina", description:"Universidad Nacional de Córdoba is "},
-			{name:"Santiago de Compostela, Spain", description:"value2"},
-			{name:"Buenos Aires, Argentina", description:"value2"},
-			{name:"London, UK", description:"value2"}
-			];
-*/
+var cities = {
+		"COR": {name:"Córdoba, Argentina", description:"Universidad Nacional de Córdoba is "},
+		"SCQ": {name:"Santiago de Compostela, Spain", description:"value2"},
+		"BUE": {name:"Buenos Aires, Argentina", description:"value2"},
+		"LON": {name:"London, UK", description:"value2"}
+	};
 
 $("#role").prepend(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
 $("#role").prepend(HTMLheaderRole.replace("%data%", bio.role));
@@ -196,7 +195,7 @@ $("#name").prepend(HTMLheaderName.replace("%data%", bio.name));
 $("#topContacts").append(HTMLmobile.replace(/%data%/g, bio.contacts.mobile));
 $("#topContacts").append(HTMLemail.replace(/%data%/g, bio.contacts.email));
 $("#topContacts").append(HTMLgithub.replace(/%data%/g, bio.contacts.github));
-$("#topContacts").append(HTMLlocation.replace(/%data%/g, bio.contacts.location));
+$("#topContacts").append(HTMLlocation.replace(/%data%/g, cities[bio.contacts.location].name));
 
 
 
@@ -208,7 +207,7 @@ education.display = function() {
 			HTMLschoolEntry.
 			replace("%name%", s.name).replace("%dates%", s.dates).
 			replace("%url%", s.url).replace("%degree%", s.degree).
-			replace("%majors%", s.majors).replace("%location%", s.location)
+			replace("%majors%", s.majors).replace("%location%", cities[s.location].name)
 			);
 	}
 	$("#education").append(HTMLonlineClasses);
@@ -233,7 +232,7 @@ work.display = function(){
 		var s = work.jobs[job];
 		$("#workExperience").append(HTMLworkEntry.
 		replace("%employer%", s.employer).replace("%title%", work.jobs[job].title).
-		replace("%dates%", work.jobs[job].dates).replace("%location%", work.jobs[job].location).
+		replace("%dates%", work.jobs[job].dates).replace("%location%", cities[work.jobs[job].location].name).
 		replace("%description%", work.jobs[job].description));
 	}
 }
