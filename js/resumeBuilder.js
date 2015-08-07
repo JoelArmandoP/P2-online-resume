@@ -1,3 +1,4 @@
+//JSON to store cv data: bio, education, work, projects, cities.
 var bio = {
 	"name" : "Joel Armando",
 	"role" : "Educational Technologist",
@@ -10,9 +11,40 @@ var bio = {
 	},
 	"pictureUrl": "images/Joel.png",
 	"welcomeMsg": "Educational technologist with extensive experience in educational research " +
-				  "and project management dipping a toe in the field of programming and web development.",
-	"skills": ["learning design", "curriculum design", "moodle","e-learning","educational research","teaching"]
-
+				  "and project management, dipping a toe in the field of programming and web development.",
+	"skills": [
+		{
+			name: "learning design",
+		  	score: 120
+		}, {
+		   name: "curriculum design",
+		   score: 120
+		}, {
+			name: "moodle",
+		   	score: 80
+		}, {
+			name: "e-learning",
+		   	score: 80
+		}, {
+			name: "research",
+		   	score: 100
+		}, {
+			name: "teaching",
+		   	score: 100
+		}, {
+			name: "HTML",
+		   	score: 40
+		}, {
+			name: "javascript",
+		   	score: 40
+		}, {
+			name: "CSS",
+		   	score: 40
+		}, {
+			name: "java",
+		   	score: 40
+		}
+	]
 };
 
 var education = {
@@ -67,18 +99,18 @@ var work = {
 		"title" : "Educational Technologist",
 		"location" : "LON",
 		"dates" : "May 2015-continue",
-		"description" :  "As part of the Learning, Enhancement and Development Department, "+ 
-						"based at Cass School of Business, I provide pedagogical and technical support for lecturers and professional staff"+
-						" As part of my duties I develop research and innovation projects in the use of educational technologies in Higher Education."			
+		"description" : "As part of the Learning, Enhancement and Development Department, "+ 
+						"based at Cass School of Business, I provide pedagogical and technical support for lecturers and professional staff."+
+						" My duties also include the development of research and innovation projects in the use of educational technologies in Higher Education."			
 	},
 	{
 		"employer": "LamMovil",
 		"title" : "E-learning Consultant",
 		"location" : "LON",
 		"dates" : "Jan 2014-Apr 2015",
-		"description" :"Provided educational advice in e-learning for healthcare programs. Designed the general strategy for the use"+ 
+		"description" : "Provided educational advice in e-learning for healthcare programs. Designed the general strategy for the use"+ 
 						" of different technologies: Content Management System (CMS), Virtual Learning Environment (VLE), Video recording,"+
-						" Social Media. Responsible for moodle administration and training and advice for tutors in the use of Moodle."
+						" Social Media. Responsible for moodle administration, and training tutors in its use."
 
 	},
 	{
@@ -143,12 +175,13 @@ var projects = {
 			"title": "Working-through statistics",
 			"dates": "2015-2016",
 			"description": "MSc in Learning Technologies' dissertation. It consists in the development of a mobile application to enhance "+
-							"teaching and learning of Statistics. It's a research-based design carried on in "+ 
+							"teaching and learning of Statistics. It is a research-based design carried on in "+ 
 							"the career of Actuarial Sciences (Cass Busines School, City University London).",
 			"image": "images/MSc.png", //TODO: replace for real image.
 			"url": "http://ansenuza.ffyh.unc.edu.ar/"//TODO replace for real url
 		}
 //I decided not to include the following projects, because they are not web-dev related. 
+//They are left commented in case I want to include them later.
 		/*, 
 		{
 			"title": "New literacies in teachers' education",
@@ -181,25 +214,52 @@ var projects = {
 };
 //A dictionary to store locations with descriptions
 var cities = {
-		"COR": {name:"Córdoba, Argentina", description:"Universidad Nacional de Córdoba is "},
-		"SCQ": {name:"Santiago de Compostela, Spain", description:"value2"},
-		"BUE": {name:"Buenos Aires, Argentina", description:"value2"},
-		"LON": {name:"London, UK", description:"value2"}
+		"COR": {name:"Córdoba, Argentina", 
+				description:"Córdoba is a city located in the geographical center of Argentina. " +
+					"It is the capital of Córdoba Province and the second-largest city in Argentina, " +
+					"with about 1.5 million inhabitants.<br/>" + 
+					"Universidad Nacional de Córdoba teaches 110.000 students with diverse origins, " +
+					"in 250 undergraduate and postgraduate careers. It has 13 Schools, 100 research " +
+					"centres, 25 librares y 16 museums. It carries out 1.500 research projects annually."},
+		"SCQ": {name:"Santiago de Compostela, Spain", 
+				description:"Santiago de Compostela is the capital of the autonomous community of " + 
+					"Galicia in northwestern Spain.<br/>"+ 
+					"The University of Santiago de Compostela offers the appeal of living in two World Heritage "+
+					"cities. Between its Santiago and Lugo Campuses, the USC offers 42 bachelor degrees corresponding "+
+					"to the different branches of knowledge: 4 Science, 8 Health Science, 12 Social Science"+ 
+					"and Legal, 8 Engineering and Architecture and 9 Art and Humanities bachelor degrees."},
+		"BUE": {name:"Buenos Aires, Argentina", 
+				description:"Buenos Aires is the capital and largest city of Argentina, and the second-largest " + 
+					"metropolitan area in South America. The Greater Buenos Aires conurbation constitutes the " +
+					"third-largest conurbation in Latin America, with a population of around fifteen and a half million."},
+		"LON": {name:"London, UK", 
+				description:"City University London is a leading international University and the only university " +
+					"in London to be both committed to academic excellence and focused on business and the " + 
+					"professions. It is among the top five per cent of universities in the world. "+
+					"Sir John Cass Business School is among the top four business schools in the UK and 18th in Europe."}
 	};
+//data for languages chart
+var langData = {
+    labels: ["English", "Spanish", "French"],
+    datasets: [
+        {
+            label: "Expertise",
+            fillColor: "rgb(163,0,19)",
+            strokeColor: "rgba(220,220,220,0.8)",
+            highlightFill: "rgba(220,220,220,0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [80, 100, 30]
+        }
+    ]
+};
+//data for skills chart
+var skillsData = [];
 
-$("#role").prepend(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
-$("#role").prepend(HTMLheaderRole.replace("%data%", bio.role));
-$("#name").prepend(HTMLheaderName.replace("%data%", bio.name));
-//I left this commented in case I want to display my picture later.
-//$("#header").prepend(HTMLbioPic.replace(/%data%/g, bio.pictureUrl));
-$("#topContacts").append(HTMLmobile.replace(/%data%/g, bio.contacts.mobile));
-$("#topContacts").append(HTMLemail.replace(/%data%/g, bio.contacts.email));
-$("#topContacts").append(HTMLgithub.replace(/%data%/g, bio.contacts.github));
-$("#topContacts").append(HTMLlocation.replace(/%data%/g, cities[bio.contacts.location].name));
+for (i in bio.skills) {
+	skillsData.push([bio.skills[i].name, bio.skills[i].score/3]);
+}
 
-
-
-
+//A function to display the education entries
 education.display = function() {
 	for(school in education.schools) {
 		var s = education.schools[school];
@@ -227,6 +287,7 @@ skills.display = function() {
 	}
 }
 
+//A function to display the work entries
 work.display = function(){
 	for(job in work.jobs) {
 		var s = work.jobs[job];
@@ -237,6 +298,7 @@ work.display = function(){
 	}
 }
 
+//A function to display the project entries
 projects.display = function() {
 	for(project in projects.projects) {
 		var p = projects.projects[project];
@@ -266,6 +328,7 @@ projects.display = function() {
 	}
 };
 
+//A function to display the footer info
 bio.displayFooter = function() {
 	$("#footerContacts").append(
 		HTMLmobile.replace(/%data%/g, bio.contacts.mobile) +
@@ -274,7 +337,7 @@ bio.displayFooter = function() {
 		HTMLgithub.replace(/%data%/g, bio.contacts.github));
 };
 
-
+//Internationalize function
 function inName(name) {
 	name = name.trim().split(" ");
 	name[1] = name[1].toUpperCase();
@@ -282,6 +345,20 @@ function inName(name) {
 	return name[0] + " " + name[1];
 }
 
+
+//The following lines display the data in the header
+$("#role").prepend(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
+$("#role").prepend(HTMLheaderRole.replace("%data%", bio.role));
+$("#name").prepend(HTMLheaderName.replace("%data%", bio.name));
+//I left this commented in case I want to display my picture later.
+//$("#header").prepend(HTMLbioPic.replace(/%data%/g, bio.pictureUrl));
+$("#topContacts").append(HTMLmobile.replace(/%data%/g, bio.contacts.mobile));
+$("#topContacts").append(HTMLemail.replace(/%data%/g, bio.contacts.email));
+$("#topContacts").append(HTMLgithub.replace(/%data%/g, bio.contacts.github));
+$("#topContacts").append(HTMLlocation.replace(/%data%/g, cities[bio.contacts.location].name));
+
+
+//Calls to functions that display data
 $("#main").append(internationalizeButton);
 education.display();
 work.display();

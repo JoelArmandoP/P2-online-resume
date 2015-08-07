@@ -12,8 +12,8 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name" class= "red-text">%data%</h1>';
-var HTMLheaderRole = '<h2 id="role">%data%</h2><hr/>';
+var HTMLheaderName = '<h1 class="red-text name">%data%</h1>';
+var HTMLheaderRole = '<h2>%data%</h2><hr/>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="red-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="red-text entypo-phone"></span><span class="white-text">%data%</span></li>';
@@ -97,7 +97,6 @@ $(document).ready(function() {
 /*
 Clicks for the Collecting Click Locations.
 */
-
 clickLocations = [];
 
 function logClicks(x,y) {
@@ -171,7 +170,7 @@ function initializeMap() {
   placeData is the object returned from search results containing information
   about a single location.
   */
-  function createMapMarker(placeData) {
+  function createMapMarker(placeData, infoWindowData) {
 
     // The next lines save location data from the search result object to local variables
     var lat = placeData.geometry.location.lat();  // latitude from the place service
@@ -190,12 +189,12 @@ function initializeMap() {
     // or hover over a pin on a map. They usually contain more information
     // about a location.
     var infoWindow = new google.maps.InfoWindow({
-      content: name
+      content: "<div class=\"maps-info-window\"><div class=\"maps-city-name\">" + name + "</div><br/>" +
+        "<div class=\"maps-city-description\">" + infoWindowData + "</div></div>"
     });
-
     // Opens an infowindow when a map marker is clicked
     google.maps.event.addListener(marker, 'click', function() {
-      infowindow.open(map, marker);
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -208,12 +207,14 @@ function initializeMap() {
   }
 
   /*
-  callback(results, status) makes sure the search returned results for a location.
-  If so, it creates a new map marker for that location.
+    Returns a callback function suitable for a call to textSearch. The function can create a marker on
+    the map, including the infoWindowData in the info window.
   */
-  function callback(results, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
-      createMapMarker(results[0]);
+  function makeCallback(infoWindowData) {
+    return function(results, status) {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        createMapMarker(results[0], infoWindowData);
+      }
     }
   }
 
@@ -228,15 +229,15 @@ function initializeMap() {
     var service = new google.maps.places.PlacesService(map);
 
     // Iterates through the array of locations, creates a search object for each location
-    for (var place in locations) {
+    for (var i in locations) {
       // the search request object
       var request = {
-        query: locations[place]
+        query: cities[locations[i]].name
       };
 
       // Actually searches the Google Maps API for location data and runs the callback
       // function with the search results after each search.
-      service.textSearch(request, callback);
+      service.textSearch(request, makeCallback(cities[locations[i]].description));
     }
   }
 
@@ -265,3 +266,26 @@ window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
   map.fitBounds(mapBounds);
 });
+
+//Language & Skills charts
+
+window.onload = function(){
+    // Create Language chart
+    var ctx = document.getElementById("languagesChart").getContext("2d");
+    new Chart(ctx).Bar(langData, {
+      responsive : true
+    });
+    // Create Skills chart
+    console.log(skillsData);
+    WordCloud(document.getElementById('skillsChart'), {
+        list: skillsData
+      } );
+/*    ctx = document.getElementById("skillsChart").getContext("2d");
+    new Chart(ctx).Bar(skillsData, {
+      responsive : true,
+    });
+*/};
+
+
+
+

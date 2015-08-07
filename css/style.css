@@ -3,12 +3,15 @@
 /* entypo */
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
+  font-size: 90%;
 }
 
 /* fontawesome */
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
+  font-size: 90%;
 }
+
 
 body,
 div,
@@ -27,6 +30,13 @@ h6 {
   color: #383838;
 }
 
+h1.name {
+  font-size: 60px;
+  line-height: 48px;
+  display: inline;
+  text-transform: uppercase; 
+  font-family: "Oswald", bold;
+}
 
 .clear-fix {
   overflow: auto;
@@ -36,14 +46,6 @@ h6 {
 .work-entry,
 .project-entry {
   padding: 2.5% 5%;%;
-}
-
-h1 {
-  font-size: 60px;
-  line-height: 48px;
-  display: inline;
-  text-transform: uppercase; 
-  font-family: "Oswald", bold;
 }
 
 h2 {
@@ -155,14 +157,9 @@ a {
 }
 
 /* TODO: Replace with image later */
-#header {
+header {
   background-color: #FFF2E7;
 }
-/*.col-md-6 { 
-  padding-left: 50px;
-  padding-right: 10px;
-}
-/*Padding doesn't work*/
 
 .flex-box {
   display: -webkit-flex;
