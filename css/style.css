@@ -31,11 +31,9 @@ h6 {
 }
 
 .name {
-  font-size: 60px;
-  line-height: 48px;
+  font: bold 60px/48px "Oswald";
   display: inline;
   text-transform: uppercase;
-  font-family: "Oswald", bold;
 }
 
 .clear-fix {
@@ -49,24 +47,16 @@ h6 {
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
+  font: bold 24px/29px;
   border-bottom: 2px solid #333;
 }
 
 h3 {
-  font-family: "bitter";
-  font-style: italic;
-  font-size: 20px;
-  line-height: 22px;
+  font: italic 20px/22px "bitter";
 }
 
 h4 {
-  font-family: "bitter";
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: bold 14px/17px "bitter";
 }
 
 h3,
@@ -106,11 +96,8 @@ a {
 }
 
 .welcome-message {
-  font-family: "bitter";
-  font-style: italic;
-  font-size: 18px;
+  font: italic 18px/28px "bitter";
   color: #a0a0a0;
-  line-height: 28px;
 }
 
 #skills-h3 {
