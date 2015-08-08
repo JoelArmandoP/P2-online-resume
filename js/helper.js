@@ -276,15 +276,10 @@ window.onload = function(){
       responsive : true
     });
     // Create Skills chart
-    console.log(skillsData);
     WordCloud(document.getElementById('skillsChart'), {
         list: skillsData
       } );
-/*    ctx = document.getElementById("skillsChart").getContext("2d");
-    new Chart(ctx).Bar(skillsData, {
-      responsive : true,
-    });
-*/};
+};
 
 
 

@@ -244,7 +244,7 @@ var langData = {
     datasets: [
         {
             label: "Expertise",
-            fillColor: "rgb(163,0,19)",
+            fillColor: "rgb(163,0,33)",
             strokeColor: "rgba(220,220,220,0.8)",
             highlightFill: "rgba(220,220,220,0.75)",
             highlightStroke: "rgba(220,220,220,1)",

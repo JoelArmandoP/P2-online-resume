@@ -84,7 +84,7 @@ h5 {
   color: #A0A0A0;
   line-height: 18px;
   float: left;
-  padding-right: 10px; //TODO: Check, there must be a better way;
+  padding-right: 10px; 
 }
 
 .location-text {
@@ -135,6 +135,7 @@ a {
 
 .red {
   background-color: #A30013; 
+  color: #FFFFFF;
 }
 
 .red-text {
