@@ -30,11 +30,11 @@ h6 {
   color: #383838;
 }
 
-h1.name {
+.name {
   font-size: 60px;
   line-height: 48px;
   display: inline;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   font-family: "Oswald", bold;
 }
 
@@ -45,7 +45,7 @@ h1.name {
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 2.5% 5%;%;
+  padding: 2.5% 2.5%;
 }
 
 h2 {
@@ -76,90 +76,75 @@ h5 {
 
 }
 
-
 .date-text {
-  font-family: "Roboto";
-  font-style: italic;
-  font-size: 14px;
-  color: #A0A0A0;
-  line-height: 18px;
+  font: italic 14px/18px "Roboto";
+  color: #a0a0a0;
   float: left;
-  padding-right: 10px; 
+  padding-right: 10px;
 }
 
 .location-text {
-  font-family: "Roboto";
-  font-style: italic;
-  font-size: 14px;
-  color: ##084C8D;
-  line-height: 18px;
-  float: right;
-
+  font: italic 14px/18px "Roboto";
+  color: #084c8d;
 }
+
 .degree-major {
-  font-family: "Roboto";
-  font-style: italic;
-  font-size: 14px;
+  font: italic 14px/16px "Roboto";
   color: #393939;
-  line-height: 16px;
 }
 
 p {
-  font-family: "Roboto";
-  font-size: 14px;
+  font: 14px/21px "Roboto";
   color: #393939;
-  line-height: 21px;
 }
 
 a {
-  font-family: "Roboto";
-  color: #6600FF; 
+  font: 16px/18px "Roboto";
+  color: #6600ff;
   text-decoration: none;
-  font-size: 16px;
-  line-height: 18px;
-  margin-top: 10px;  
+  margin-top: 10px;
 }
 
 .welcome-message {
   font-family: "bitter";
   font-style: italic;
   font-size: 18px;
-  color: #A0A0A0;
+  color: #a0a0a0;
   line-height: 28px;
 }
 
 #skills-h3 {
-  color: #F3843E;
+  color: #f3843e;
   display: none;
 }
 
 .red {
-  background-color: #A30013; 
-  color: #FFFFFF;
+  background-color: #a30013;
+  color: #fff;
 }
 
 .red-text {
-  color: #A30013;
+  color: #a30013;
 }
 
 .gray-text {
   font-weight: bold;
-  color: #6E6E6E;
+  color: #6e6e6e;
 }
 
 .gray {
-  background-color: #D0CABF;
+  background-color: #d0cabf;
   padding-bottom: 10px;
   clear:both;
 }
 
 .dark-gray {
-  background-color: #6E6E6E;
+  background-color: #6e6e6e;
 }
 
 /* TODO: Replace with image later */
 header {
-  background-color: #FFF2E7;
+  background-color: #fff2e7;
 }
 
 .flex-box {
@@ -172,8 +157,8 @@ header {
 }
 
 .center-content {
-  padding: 2.5% 5%;
-  align-text: left; 
+  padding: 2.5% 2.5%;
+  text-align: left;
 }
 
 ul {

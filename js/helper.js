@@ -7,13 +7,14 @@ Don't worry, you'll learn what's going on in this file throughout the course. Yo
 Cameron Pittman
 */
 
+'use strict';
 
 /*
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 class="red-text name">%data%</h1>';
-var HTMLheaderRole = '<h2>%data%</h2><hr/>';
+var HTMLheaderRole = '<h2>%data%</h2>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="red-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="red-text entypo-phone"></span><span class="white-text">%data%</span></li>';
@@ -47,9 +48,9 @@ var HTMLprojectEntry =
       'data-toggle="modal" data-target="%data-target%" alt="%alt-text%">'
   '</div>';
 
-var HTMLschoolEntry = 
-  '<div class="col-md-6 education-entry">' + 
-    '<div class="education-name"><a href="%url%">%name% - %degree%</a></div>' + 
+var HTMLschoolEntry =
+  '<div class="col-md-6 education-entry">' +
+    '<div class="education-name"><a href="%url%">%name% - %degree%</a></div>' +
     '<div class="location-text">%location%</div>' +
     '<div class="date-text">%dates%</div>' +
     '<div class="degree-major">%majors%</div>' +
@@ -57,9 +58,9 @@ var HTMLschoolEntry =
 
 var HTMLonlineClasses = '<h3 class= "col-md-12">Online Classes</h3>';
 
-var HTMLonlineEntry = 
-  '<div class="col-md-12 education-entry">' + 
-    '<div class="online-name"><a href="%url%">%name% - %degree%</a></div>' + 
+var HTMLonlineEntry =
+  '<div class="col-md-12 education-entry">' +
+    '<div class="online-name"><a href="%url%">%name% - %degree%</a></div>' +
     '<div class="date-text">%dates%</div>' +
   '</div>';
 
@@ -90,14 +91,14 @@ var googleMap = '<div id="map"></div>';
 $(document).ready(function() {
   $('button').click(function() {
     var iName = inName() || function(){};
-    $('#name').html(iName);  
+    $('#name').html(iName);
   });
 });
 
 /*
 Clicks for the Collecting Click Locations.
 */
-clickLocations = [];
+var clickLocations = [];
 
 function logClicks(x,y) {
   clickLocations.push(
@@ -112,7 +113,7 @@ function logClicks(x,y) {
 $(document).click(function(loc) {
   var x = loc.pageX;
   var y = loc.pageY;
-  logClicks(x,y); 
+  logClicks(x,y);
 });
 
 /*
@@ -189,8 +190,8 @@ function initializeMap() {
     // or hover over a pin on a map. They usually contain more information
     // about a location.
     var infoWindow = new google.maps.InfoWindow({
-      content: "<div class=\"maps-info-window\"><div class=\"maps-city-name\">" + name + "</div><br/>" +
-        "<div class=\"maps-city-description\">" + infoWindowData + "</div></div>"
+      content: '<div class="maps-info-window"><div class="maps-city-name">' + name + '</div><br/>' +
+        '<div class="maps-city-description">'  + infoWindowData + '</div></div>'
     });
     // Opens an infowindow when a map marker is clicked
     google.maps.event.addListener(marker, 'click', function() {
@@ -271,8 +272,8 @@ window.addEventListener('resize', function(e) {
 
 window.onload = function(){
     // Create Language chart
-    var ctx = document.getElementById("languagesChart").getContext("2d");
-    new Chart(ctx).Bar(langData, {
+    var chart = new Chart(document.getElementById('languagesChart').getContext('2d'));
+    chart.Bar(langData, {
       responsive : true
     });
     // Create Skills chart
